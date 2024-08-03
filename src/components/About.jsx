@@ -1,16 +1,58 @@
 import React from 'react';
+import { useEffect } from 'react';
 import "../css/lokal/bootstrap.min.css";
 import "../css/lokal/style.css";
 import "../css/lokal/tiny-slider.css";
+import Bag from "./images/bag.svg";
+import Cart from "./images/cart.svg";
+import Truck from "./images/truck.svg";
+import Bowl2 from "./images/bowl-2.png";
+import Bowl3 from "./images/bowl-3.png";
+import Couch from "./images/couch.png";
+import Cross from "./images/cross.svg";
+import DotsGreen from "./images/dots-green.svg";
+import DotsLight from "./images/dots-light.svg";
+import DotsYellow from "./images/dots-yellow.svg";
+import EnvelopeOutline from "./images/envelope-outline.svg";
+import ImgGrid1 from "./images/img-grid-1.jpg";
+import ImgGrid2 from "./images/img-grid-2.jpg";
+import ImgGrid3 from "./images/img-grid-3.jpg";
+import Person1 from "./images/person_1.jpg";
+import Person2 from "./images/person_2.jpg";
+import Person3 from "./images/person_3.jpg";
+import Person4 from "./images/person_4.jpg";
+import Person11 from "./images/person-1.jpg";
+import Person111 from "./images/person-1.png";
+import Post1 from "./images/post-1.jpg";
+import Post2 from "./images/post-2.jpg";
+import Post3 from "./images/post-3.jpg";
+import Product1 from "./images/product-1.png";
+import Product2 from "./images/product-2.png";
+import Product3 from "./images/product-3.png";
+import Return from "./images/return.svg";
+import Support from "./images/support.svg";
+import User from "./images/user.svg";
+import Sofa from "./images/sofa.png";
+import WhyChoose from "./images/why-choose-us-img.jpg"
+
 
 
 const About = () => {
+  useEffect(() => {
+    if (window.tinyslider) {
+      window.tinyslider();
+    }
+    if (window.sitePlusMinus) {
+      window.sitePlusMinus();
+    }
+  }, []);
+
   return (
     <div>
       <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
         <div class="container">
-          <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+          <a class="navbar-brand" href="index.html">cbStore<span>.</span></a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,8 +71,8 @@ const About = () => {
             </ul>
 
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-              <li><a class="nav-link" href="#"><img src="../images/user.svg" /></a></li>
-              <li><a class="nav-link" href="cart.html"><img src="../images/cart.svg" /></a></li>
+              <li><a class="nav-link" href="#"><img src={User} /></a></li>
+              <li><a class="nav-link" href="cart.html"><img src={Cart} /></a></li>
             </ul>
           </div>
         </div>
@@ -49,7 +91,7 @@ const About = () => {
             </div>
             <div class="col-lg-7">
               <div class="hero-img-wrap">
-                <img src="./images/bag.svg" class="img-fluid" />
+                <img src={Couch} class="img-fluid" />
               </div>
             </div>
           </div>
@@ -67,7 +109,7 @@ const About = () => {
                 <div class="col-6 col-md-6">
                   <div class="feature">
                     <div class="icon">
-                      <img src="./images/truck.svg" alt="Image" class="imf-fluid" />
+                      <img src={Truck} alt="Image" class="imf-fluid" />
                     </div>
                     <h3>Fast &amp; Free Shipping</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -77,7 +119,7 @@ const About = () => {
                 <div class="col-6 col-md-6">
                   <div class="feature">
                     <div class="icon">
-                      <img src="" alt="Image" class="imf-fluid" />
+                      <img src={Bag} alt="Image" class="imf-fluid" />
                     </div>
                     <h3>Easy to Shop</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -87,7 +129,7 @@ const About = () => {
                 <div class="col-6 col-md-6">
                   <div class="feature">
                     <div class="icon">
-                      <img src="images/support.svg" alt="Image" class="imf-fluid" />
+                      <img src={Support} alt="Image" class="imf-fluid" />
                     </div>
                     <h3>24/7 Support</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -97,7 +139,7 @@ const About = () => {
                 <div class="col-6 col-md-6">
                   <div class="feature">
                     <div class="icon">
-                      <img src="images/return.svg" alt="Image" class="imf-fluid" />
+                      <img src={Return} alt="Image" class="imf-fluid" />
                     </div>
                     <h3>Hassle Free Returns</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -109,7 +151,7 @@ const About = () => {
 
             <div class="col-lg-5">
               <div class="img-wrap">
-                <img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid" />
+                <img src={WhyChoose} alt="Image" class="img-fluid" />
               </div>
             </div>
 
@@ -132,7 +174,7 @@ const About = () => {
 
 
             <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-              <img src="images/person_1.jpg" class="img-fluid mb-5" />
+              <img src={Person1} class="img-fluid mb-5" />
               <h3 clas><a href="#"><span class="">Lawson</span> Arnold</a></h3>
               <span class="d-block position mb-4">CEO, Founder, Atty.</span>
               <p>Separated they live in.
@@ -141,7 +183,7 @@ const About = () => {
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-              <img src="images/person_2.jpg" class="img-fluid mb-5" />
+              <img src={Person2} class="img-fluid mb-5" />
 
               <h3 clas><a href="#"><span class="">Jeremy</span> Walker</a></h3>
               <span class="d-block position mb-4">CEO, Founder, Atty.</span>
@@ -152,7 +194,7 @@ const About = () => {
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-              <img src="images/person_3.jpg" class="img-fluid mb-5" />
+              <img src={Person3} class="img-fluid mb-5" />
               <h3 clas><a href="#"><span class="">Patrik</span> White</a></h3>
               <span class="d-block position mb-4">CEO, Founder, Atty.</span>
               <p>Separated they live in.
@@ -161,7 +203,7 @@ const About = () => {
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-              <img src="images/person_4.jpg" class="img-fluid mb-5" />
+              <img src={Person4} class="img-fluid mb-5" />
 
               <h3 clas><a href="#"><span class="">Kathryn</span> Ryan</a></h3>
               <span class="d-block position mb-4">CEO, Founder, Atty.</span>
@@ -171,10 +213,6 @@ const About = () => {
 
 
             </div>
-
-
-
-
           </div>
         </div>
       </div>
@@ -211,7 +249,7 @@ const About = () => {
 
                           <div class="author-info">
                             <div class="author-pic">
-                              <img src="images/person-1.png" alt="Maria Jones" class="img-fluid" />
+                              <img src={Person11} alt="Maria Jones" class="img-fluid" />
                             </div>
                             <h3 class="font-weight-bold">Maria Jones</h3>
                             <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -234,7 +272,7 @@ const About = () => {
 
                           <div class="author-info">
                             <div class="author-pic">
-                              <img src="images/person-1.png" alt="Maria Jones" class="img-fluid" />
+                              <img src={Person111} alt="Maria Jones" class="img-fluid" />
                             </div>
                             <h3 class="font-weight-bold">Maria Jones</h3>
                             <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -257,7 +295,7 @@ const About = () => {
 
                           <div class="author-info">
                             <div class="author-pic">
-                              <img src="images/person-1.png" alt="Maria Jones" class="img-fluid" />
+                              <img src={Person111} alt="Maria Jones" class="img-fluid" />
                             </div>
                             <h3 class="font-weight-bold">Maria Jones</h3>
                             <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
@@ -281,13 +319,13 @@ const About = () => {
         <div class="container relative">
 
           <div class="sofa-img">
-            <img src="images/sofa.png" alt="Image" class="img-fluid" />
+            <img src={Sofa} alt="Image" class="img-fluid" />
           </div>
 
           <div class="row">
             <div class="col-lg-8">
               <div class="subscription-form">
-                <h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid" /></span><span>Subscribe to Newsletter</span></h3>
+                <h3 class="d-flex align-items-center"><span class="me-1"><img src={EnvelopeOutline} alt="Image" class="img-fluid" /></span><span>Subscribe to Newsletter</span></h3>
 
                 <form action="#" class="row g-3">
                   <div class="col-auto">
@@ -309,7 +347,7 @@ const About = () => {
 
           <div class="row g-5 mb-5">
             <div class="col-lg-4">
-              <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+              <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">cbStore<span>.</span></a></div>
               <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
 
               <ul class="list-unstyled custom-social">
@@ -384,4 +422,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

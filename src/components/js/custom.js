@@ -64,8 +64,6 @@
         init();
         
     };
-
-    // Expose the functions to be used in other modules
     window.tinyslider = tinyslider;
     window.sitePlusMinus = sitePlusMinus;
 
